@@ -1,11 +1,11 @@
-class News {
+class ApiResultModel {
   String status;
   int totalResults;
   List<Articles> articles;
 
-  News({this.status, this.totalResults, this.articles});
+  ApiResultModel({this.status, this.totalResults, this.articles});
 
-  News.fromJson(Map<String, dynamic> json) {
+  ApiResultModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     totalResults = json['totalResults'];
     if (json['articles'] != null) {
