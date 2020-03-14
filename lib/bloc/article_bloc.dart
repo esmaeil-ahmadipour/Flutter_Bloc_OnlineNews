@@ -3,11 +3,11 @@ import 'package:flutterblocapi/bloc/article_event.dart';
 import 'package:flutterblocapi/bloc/article_state.dart';
 import 'package:flutterblocapi/data/model/api_result_model.dart';
 import 'package:flutterblocapi/data/repository/article_repository.dart';
-
+import 'package:meta/meta.dart';
 class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
   ArticleRepository repository;
 
-  ArticleBloc(this.repository);
+  ArticleBloc({@required this.repository});
 
   @override
   ArticleState get initialState => ArticleInitialState();

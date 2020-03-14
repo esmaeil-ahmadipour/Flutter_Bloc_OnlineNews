@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:BlocProvider(create: (context)=>ArticleBloc(ArticleRepositoryImpl()),
+      home:BlocProvider(create: (context)=>ArticleBloc(repository: ArticleRepositoryImpl()),
         child: HomePage(),
       ),
     );
